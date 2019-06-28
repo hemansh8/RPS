@@ -20,6 +20,7 @@ function changeVersion(){
     if(versionAdjust%2==0){
         version=5;
         version_button.innerText="Old Version";
+       refresh();
         for (var i = 0; i < newProcess.length; i++) {
             newProcess[i].style.display = "inline-block";
         }
@@ -27,6 +28,7 @@ function changeVersion(){
     else{
         version=3;
         version_button.innerText="New Version";
+        refresh();
         for (var j = 0; j < newProcess.length; j++) {
             newProcess[j].style.display = "none";
         }
@@ -111,9 +113,10 @@ function result_function(userOption) {
 }
 
 
+var write_result = document.getElementById('result');
+
 function score_update(op1,op2) {
-   var write_result = document.getElementById('result');
-   
+  
     switch(op1+op2){
         
         case 'ScissorPaper':
@@ -146,6 +149,13 @@ function score_update(op1,op2) {
 }
 
 
+
+var compScore = document.getElementById('compScore');
+var compSc = compScore.innerText;
+var userScore = document.getElementById('userScore');
+var userSc = userScore.innerText;
+
+
 function win()
 {
     var userScore = document.getElementById('userScore');
@@ -167,4 +177,18 @@ function lose()
 function image_dispay(player,imageChosen){
     
     document.querySelector('#'+player+'>img').src = "./" + imageChosen + ".png";
+}
+
+
+function refresh()
+{
+    document.querySelector('#userChoice>img').src = "./userStart.gif";
+    document.querySelector('#compChoice>img').src = "./compStart.gif";
+    userSc=0;
+    compSc=0;
+    compScore.innerText=compSc;
+    userScore.innerText=userSc;
+    write_result.innerText=`LET's BEGIN!`;
+    document.getElementById('userVS').innerText='Rock';
+    document.getElementById('compVS').innerText='Paper?';
 }
