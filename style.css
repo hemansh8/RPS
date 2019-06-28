@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+    
+}
+body{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+header{
+    /* background: #112277; */
+    background: rgb(177, 54, 54);
+    color: white;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 10vh;
+    z-index: 2;
+    border-bottom: #eeeeee solid;
+}
+header > h1{
+    
+    padding: 10px;
+    
+}
+header > ul{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+header > ul >li{
+    /* background: #112277; */
+    background: #eeeeee;
+    list-style: none;
+    border: #eeeeee solid;
+    border-radius: 10%;
+    margin: 10px;
+    
+}
+a{
+    text-decoration-line: none;
+    color: red;
+    vertical-align: middle;
+}
+main{
+    height: 98vh;
+    width: 100vw;;
+    grid-row: 2/3;
+    position: absolute;
+    background: #0c1649;
+}
+
+.page{
+    height: 100%;
+    overflow: hidden;
+    padding-top: 10vh;
+    background: #0c1649;
+}
+
+#play{
+    display: grid;
+    grid-template-columns: 1fr repeat(3,2fr) 1fr;
+    grid-template-rows: 1fr 4fr 2fr; 
+
+}
+
+.gameZone{
+    grid-row: 2/3;
+    border: #eeeeee solid;
+    height: 40vh;
+    width: 20vw;
+    text-align: center;
+    overflow: hidden;
+    margin: 5vh auto;
+    border-radius: 5%;
+    background: #101f68;
+    color: rgb(177, 54, 54);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#userChoice{
+    grid-column: 2/3;
+}
+
+img{
+    width: 80%;
+    /* margin: auto; */
+    height: 90%;
+}
+
+#score{
+    grid-column: 3/4;
+   
+
+}
+#compChoice{
+    grid-column: 4/5;
+}
+
+#choose{
+    grid-row: 3/4;
+   grid-column: 1/6;
+   margin: auto;
+}
+
+
+
+#choose>div{
+    border: #eeeeee solid;
+    border-radius: 50%;
+    padding: 10px;
+    height: auto;
+    width: 100px;
+    color: rgb(177, 54, 54);
+    background: #101f68;
+    text-align: center;
+    /* vertical-align: middle; */
+    margin: 1vh;
+    
+}
+
+.oldVersion{
+    display: inline-block;
+}
+
+/* //spockLizard */
+
+.newVersion{
+    display: none;
+}
+
+
+
+#choose>div:hover {
+    background: rgb(177, 54, 54);
+    color: #fff;
+    cursor: pointer;
+    border: black solid;
+}
+
+.selection{
+    box-shadow: 0 0 20px grey;
+}
+
+
+#rules{
+    width: 100%;
+}
+
+
+.page>img{
+    width: auto;
+    border: red solid;
+    border-radius: 30%;
+    height: 80%;
+    margin: 10vh 5vw;
+    background: #eeeeee;
+}
+
+
+@media screen and (max-width: 1075px){
+    header{
+        height: 15vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header>ul>li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 670px){
+    header{
+        grid-template-columns: 1fr;
+        height: 25vh;
+        text-align: center;
+        
+    }
+    
+
+    .gameZone{
+        width: 30vw;
+    }
+    #rules>img{
+        width: 80vw;
+        height: auto;
+        margin: 15vh 10vw;
+    }
+}
+
+@media screen and (max-width: 585px){
+    #choose>div{
+        font-size: smaller;
+        width: 75px;
+    }
+}
