@@ -1,72 +1,80 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Rock Paper Scissors 
-            <span class="newVersion">
-                Lizard Spock
-            </span>
-        </h1>
-        <ul>
-            <li><a href="#play">Let's Play</a></li>
-            <li><a href="#rules">Rules</a></li>
-            <li ><a href="#play" id="versionButton">New Version</a></li>
-        </ul>
+      <h1>
+        Rock Paper Scissors
+        <span class="newVersion">
+          Lizard Spock
+        </span>
+      </h1>
+      <ul>
+        <li><a href="#play">Let's Play</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#play" id="versionButton">New Version</a></li>
+      </ul>
     </header>
 
     <main>
-        <div id="play" class="page">
-            <div id="userChoice" class="gameZone">
-                <h3>Your Choice</h3>
-                <img src="./userStart.gif">
-                
-            </div>
-            <div id="score" class="gameZone">
-                <h3>Score</h3>
-                <h4>
-                    <span id="userScore">0</span> : 
-                    <span id="compScore">0</span>
-                </h4>
-                <h4>
-                        <span id="userVS">Rock</span> vs 
-                        <span id="compVS">Paper?</span>
-                </h4>
-                <h3 id="result">LET's BEGIN!</h3>
-            </div>
-            <div id="compChoice" class="gameZone">    
-                <h3>Comp Choice</h3>
-                <img src="./compStart.gif">
-            </div>
-            <div id="choose">
-                <div id="rock" class="oldVersion">
-                    Rock
-                </div>               
-                <div id="paper" class="oldVersion">
-                    Paper
-                </div>                   
-                <div id="scissor" class="oldVersion">
-                    Scissors
-                </div>
-                <div id="lizard" class="newVersion">
-                    Lizard
-                </div>                   
-                <div id="spock" class="newVersion">
-                    Spock
-                </div>
-            </div>
+      <div id="play" class="page">
+        <div id="userChoice" class="gameZone">
+          <h3>Your Choice</h3>
+          <img src="./images/userStart.gif" />
         </div>
-        <div id="rules" class="page">
-            <img src="./oldrules.png" alt="Rock beats paper, paper beats scissors, scissors beat rock">
+        <div id="score" class="gameZone">
+          <h3>Score</h3>
+          <h4>
+            <span id="userScore">0</span> :
+            <span id="compScore">0</span>
+          </h4>
+          <h4>
+            <span id="userVS">Rock</span> vs
+            <span id="compVS">Paper?</span>
+          </h4>
+          <h3 id="result">LET's BEGIN!</h3>
         </div>
+        <div id="compChoice" class="gameZone">
+          <h3>Comp Choice</h3>
+          <img src="./images/compStart.gif" />
+        </div>
+        <div id="choose">
+          <div id="rock" class="oldVersion">
+            Rock
+          </div>
+          <div id="paper" class="oldVersion">
+            Paper
+          </div>
+          <div id="scissor" class="oldVersion">
+            Scissors
+          </div>
+          <div id="lizard" class="newVersion">
+            Lizard
+          </div>
+          <div id="spock" class="newVersion">
+            Spock
+          </div>
+        </div>
+      </div>
+      <div id="rules" class="page">
+        <img
+          src="./images/oldrules.png"
+          alt="Rock beats paper, paper beats scissors, scissors beat rock"
+        />
+      </div>
     </main>
-    <iframe src="./silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio src="./music.mp3" autoplay loop></audio>
+    <iframe
+      src="./audio/silence.mp3"
+      allow="autoplay"
+      id="audio"
+      style="display:none"
+    ></iframe>
+    <audio src="./audio/music.mp3" autoplay loop></audio>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
